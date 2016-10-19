@@ -13,7 +13,7 @@ This Codebook contains additional information about the project itself, the info
 *********************************************************************************************************************
 
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 
 One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
 
@@ -74,17 +74,17 @@ For the purposes of this project, the files in the Inertial Signals folders are 
 
 ##Explanation of the connection between the data files and the variables
 
-A. Values of Variable Activity consist of: 
-	1. data from “Y_train.txt” 
-	2. data from “Y_test.txt”
+A. Values of Variable Activity consist of: <br />
+	1. data from “Y_train.txt” <br />
+	2. data from “Y_test.txt” <br />
 
-B. Values of Variable Subject consist of: 
-	1. data from “subject_train.txt” 
-	2. and subject_test.txt"
+B. Values of Variable Subject consist of: <br />
+	1. data from “subject_train.txt” <br />
+	2. and subject_test.txt" <br />
 
-C. Values of Variable Features consist of:
-    1. data from “X_train.txt” 
-    2. data from “X_test.txt”
+C. Values of Variable Features consist of: <br />
+    1. data from “X_train.txt” <br />
+    2. data from “X_test.txt” <br />
 
 
 D. Particular levels of Variable Activity come from “activity_labels.txt”
@@ -96,61 +96,61 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
 
 ### VARIABLE DESCRIPTION FOR THE VARIABLES USED IN THE CODE LEADING TO A CLEAN DATA SET (steps for the tidy data process are described below)
 
-> str(Activity_Traindata)
+* str(Activity_Traindata)
 'data.frame':	7352 obs. of  1 variable:
  $ V1: int  5 5 5 5 5 5 5 5 5 5 ...
 
- > str(Activity_Testdata)
+* str(Activity_Testdata)
 'data.frame':	2947 obs. of  1 variable:
  $ V1: int  5 5 5 5 5 5 5 5 5 5 ...
 
- > str(Subject_Traindata)
+* str(Subject_Traindata)
 'data.frame':	7352 obs. of  1 variable:
  $ V1: int  1 1 1 1 1 1 1 1 1 1 ...
 
-> str(Subject_Testdata)
+* str(Subject_Testdata)
 'data.frame':	2947 obs. of  1 variable:
  $ V1: int  2 2 2 2 2 2 2 2 2 2 ...
 
-> str(Features_Traindata)
+* str(Features_Traindata)
 'data.frame':	7352 obs. of  561 variables:
  $ V1  : num  0.289 0.278 0.28 0.279 0.277 ...
  $ V2  : num  -0.0203 -0.0164 -0.0195 -0.0262 -0.0166 ...
  $ V3  : num  -0.133 -0.124 -0.113 -0.123 -0.115 ...
  $ V4  : num  -0.995 -0.998 -0.995 -0.996 -0.998 ...
  $ V5  : num  -0.983 -0.975 -0.967 -0.983 -0.981 ...
- ## list output truncated
+ - list output truncated
 
- > str(Features_Testdata)
+ * str(Features_Testdata)
 'data.frame':	2947 obs. of  561 variables:
  $ V1  : num  0.257 0.286 0.275 0.27 0.275 ...
  $ V2  : num  -0.0233 -0.0132 -0.0261 -0.0326 -0.0278 ...
  $ V3  : num  -0.0147 -0.1191 -0.1182 -0.1175 -0.1295 ...
  $ V4  : num  -0.938 -0.975 -0.994 -0.995 -0.994 ...
  $ V5  : num  -0.92 -0.967 -0.97 -0.973 -0.967 ...
-## list output truncated
+- list output truncated
 
 ## AFTER MERGING TEST DATA AND TRAINING DATA TO HAVE ONE DATA SET FOR SUBJECT/ACTIVITY/FEATURES(RBINDING)
 
-> str(Subject_data)
+* str(Subject_data)
 'data.frame':	10299 obs. of  1 variable:
  $ V1: int  2 2 2 2 2 2 2 2 2 2 ...
 
-> str(Features_data)
+* str(Features_data)
 'data.frame':	10299 obs. of  561 variables:
  $ V1  : num  0.257 0.286 0.275 0.27 0.275 ...
  $ V2  : num  -0.0233 -0.0132 -0.0261 -0.0326 -0.0278 ...
  $ V3  : num  -0.0147 -0.1191 -0.1182 -0.1175 -0.1295 ...
  $ V4  : num  -0.938 -0.975 -0.994 -0.995 -0.994 ...
  $ V5  : num  -0.92 -0.967 -0.97 -0.973 -0.967 ...
-## list output truncated
+- list output truncated
 
-> str(Activity_data)
+* str(Activity_data)
 'data.frame':	10299 obs. of  1 variable:
  $ V1: int  5 5 5 5 5 5 5 5 5 5 ...
 
 
-## All data data frame after all data sets are merged together:
+## Data_All data frame after all data sets are merged together:
 
  > str(Data_All)
 'data.frame':	10299 obs. of  563 variables:
@@ -167,10 +167,10 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
 ## EXTRACTING THE MEASUREMENTS ON THE MEAN AND STD FOR EACH MEASUREMENT 
 ## Data set with with measurements on the mean and standard deviation only
 
-> str(Names_selection)
+*str(Names_selection)
  chr [1:81] "tBodyAcc-mean()-X" "tBodyAcc-mean()-Y" "tBodyAcc-mean()-Z" ...
 
- > str(Data_All_StD_Mean)
+* str(Data_All_StD_Mean)
 'data.frame':	10299 obs. of  68 variables:
  $ tBodyAcc-mean()-X          : num  0.257 0.286 0.275 0.27 0.275 ...
  $ tBodyAcc-mean()-Y          : num  -0.0233 -0.0132 -0.0261 -0.0326 -0.0278 ...
@@ -245,12 +245,12 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
 
 ## Appropriately labels the data set with descriptive variable names (changes shortenings/prefixes for full descriptive name. The following substitutions were applied: 
 
-Gyro -> Gyroskope
-Mag -> Magnitude
-Prefix "t" -> Time
-Acc -> Accelerometer
-BodyBody -> Body
-Prefix "f" -> Frequency
+1. Gyro -> Gyroskope
+2. Mag -> Magnitude
+3. Prefix "t" -> Time
+4. Acc -> Accelerometer
+5. BodyBody -> Body
+6. Prefix "f" -> Frequency
 
 
 > names(Data_All_StD_Mean)
@@ -350,25 +350,25 @@ The TIDY.TXT file contains the fields that will be described below:
 
 2. READING OF DATA FROM THE PARTICULAR FILES
 
-* Reading of data from the files into the variables
+* Reading of data from the files into the variables <br />
 
-2.1 Read the Activity files
-2.2 Read the Subject files
-2.3 Read Features files 
+2.1 Read the Activity files <br />
+2.2 Read the Subject files <br />
+2.3 Read Features files <br /> 
 
 ##As mentioned above - Explanation of the connection between the data files and the variables
 
-A. Values of Variable Activity consist of: 
-	1. data from “Y_train.txt” 
-	2. data from “Y_test.txt”
+A. Values of Variable Activity consist of: <br />
+	1. data from “Y_train.txt” <br />
+	2. data from “Y_test.txt” <br />
 
-B. Values of Variable Subject consist of: 
-	1. data from “subject_train.txt” 
-	2. and subject_test.txt"
+B. Values of Variable Subject consist of: <br />
+	1. data from “subject_train.txt” <br />
+	2. and subject_test.txt" <br />
 
-C. Values of Variable Features consist of:
-    1. data from “X_train.txt” 
-    2. data from “X_test.txt”
+C. Values of Variable Features consist of: <br />
+    1. data from “X_train.txt” <br />
+    2. data from “X_test.txt” <br />
 
 
 D. Particular levels of Variable Activity come from “activity_labels.txt”

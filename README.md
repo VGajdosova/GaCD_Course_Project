@@ -1,12 +1,12 @@
 
 ### Coursera: COURSE PROJECT
-### Data sceince specialization course: Getting and Cleaning Data
+### Data science specialization course: Getting and Cleaning Data
 ### Veronika Gajdosova
 
 
 ## GENERAL INFORMATION
 
-This repository holds all my work for the "Getting and Cleaning data" project course. The description of the files can be found below (script file-run_analysis.R, codeBook.md)
+This repository holds all my work for the "Getting and Cleaning data" project course. The description of the files can be found below (script file-run_analysis.R, codeBook.md, tidydata.txt)
 
 ## OBJECTIVE OF THE PROJECT
 
@@ -31,17 +31,17 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
  * Loads the information on features and activity from the corresponding text files (both train and test data)
  * Merges the training and the test sets to create one data set
  * Names variables with descriptive names (loading information from the features.txt file) 
- * Merges columns of all datasets into 1 Data frame
+ * Merges columns of all datasets into one data frame
  * Extracts only measurements on the mean and standard deviation for each measurement
  * Uses descriptive activity names to name the activities in the data set - Levels of Varible Activity come from “activity_labels.txt”, factorizing variable activity
  * Appropriately labels the data set with descriptive variable names (changes shortenings/prefixes for full descriptive name. The following substitutions were applied: 
 
-Gyro -> Gyroskope
-Mag -> Magnitude
-Prefix "t" -> Time
-Acc -> Accelerometer
-BodyBody -> Body
-Prefix "f" -> Frequency
+1. Gyro -> Gyroskope
+2. Mag -> Magnitude
+3. Prefix "t" -> Time
+4. Acc -> Accelerometer
+5. BodyBody -> Body
+6. Prefix "f" -> Frequency
 
  * Creates an independent tidy data set with the average of each variable for each activity and each subject.
  * Finally, the script will create a tidy data set containing the means of all the columns (per test subject & per activity). The name of this tidy dataset is called tidydata.txt, and it can also be found in this repository together with the codebook and run_analysis.R code.
