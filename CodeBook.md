@@ -278,12 +278,12 @@ The TIDY.TXT file contains the fields that will be described below:
 
 ## Activity Labels
 
-* 1. WALKING: subject was walking during the test
-* 2. WALKING_UPSTAIRS: subject was walking up a staircase during the test
-* 3. WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
-* 4. SITTING: subject was sitting during the test
-* 5. STANDING: subject was standing during the test
-* 6. LAYING: subject was laying down during the test
+* 1. `WALKING`: subject was walking during the test
+* 2. `WALKING_UPSTAIRS`: subject was walking up a staircase during the test
+* 3. `WALKING_DOWNSTAIRS`: subject was walking down a staircase during the test
+* 4. `SITTING`: subject was sitting during the test
+* 5. `STANDING`: subject was standing during the test
+* 6. `LAYING`: subject was laying down during the test
 
 
 *********************************************************************************************************************
@@ -295,7 +295,7 @@ Downloading of data from the source and unzipping it in the project folder (./pr
 
 ## READING OF DATA FROM THE PARTICULAR FILES
 
-* Reading of data from the files into the variables <br />
+Reading of data from the files into the variables <br />
 
  * Read the Activity files <br />
  * Read the Subject files <br />
@@ -304,16 +304,16 @@ Downloading of data from the source and unzipping it in the project folder (./pr
 As mentioned above - Explanation of the connection between the data files and the variables
 
 A. Values of Variable Activity consist of: <br />
-	* data from “Y_train.txt” <br />
-	* data from “Y_test.txt” <br />
+* data from “Y_train.txt” <br />
+* data from “Y_test.txt” <br />
 
 B. Values of Variable Subject consist of: <br />
-	* data from “subject_train.txt” <br />
-	* and subject_test.txt" <br />
+* data from “subject_train.txt” <br />
+* and subject_test.txt" <br />
 
 C. Values of Variable Features consist of: <br />
-    * data from “X_train.txt” <br />
-    * data from “X_test.txt” <br />
+* data from “X_train.txt” <br />
+* data from “X_test.txt” <br />
 
 
 D. Particular levels of Variable Activity come from “activity_labels.txt”
@@ -321,9 +321,9 @@ D. Particular levels of Variable Activity come from “activity_labels.txt”
 E. Names of Variable Features come from “features.txt”
 
 ## CREATING ONE DATA SET BY MERGING THE TRAINING AND THE TEST SETS 
-* merging the data tables by rows
-* naming the variables with Subject and Activity names
-* creating one data set for all data (merging by columns)
+* Merging the data tables by rows
+* Naming the variables with Subject and Activity names
+* Creating one data set for all data (merging by columns)
 
 
 ## EXTRACTING THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR PARTICULAR MEASUREMENTS
@@ -344,7 +344,7 @@ The following substitutions were applied: <br />
 * BodyBody -> Body
 * Prefix "f" -> Frequency
 
-7. CREATING A SECOND, INDEPENDENT TIDY DATA SET AND OUTPUTING IT INTO TIDYDATA.TXT 
+## CREATING A SECOND, INDEPENDENT TIDY DATA SET AND OUTPUTING IT INTO TIDYDATA.TXT 
 
 Tidy data set is created with the average of each variable for each activity and each subject based on the data set in the previous step. It is saved in the project folder.
 
