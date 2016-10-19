@@ -29,7 +29,7 @@ You should create one R script called run_analysis.R that does the following.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
-5 .From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 *********************************************************************************************************************
 ##												    PROJECT INFORMATION
@@ -118,17 +118,20 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
  $ V2  : num  -0.0203 -0.0164 -0.0195 -0.0262 -0.0166 ...
  $ V3  : num  -0.133 -0.124 -0.113 -0.123 -0.115 ...
  $ V4  : num  -0.995 -0.998 -0.995 -0.996 -0.998 ...
- $ V5  : num  -0.983 -0.975 -0.967 -0.983 -0.981 ...
- - list output truncated
+ $ V5  : num  -0.983 -0.975 -0.967 -0.983 -0.981 ... <br />
+ 
 
- * str(Features_Testdata)
+(list output truncated) <br />
+
+* str(Features_Testdata)
 'data.frame':	2947 obs. of  561 variables:
  $ V1  : num  0.257 0.286 0.275 0.27 0.275 ...
  $ V2  : num  -0.0233 -0.0132 -0.0261 -0.0326 -0.0278 ...
  $ V3  : num  -0.0147 -0.1191 -0.1182 -0.1175 -0.1295 ...
  $ V4  : num  -0.938 -0.975 -0.994 -0.995 -0.994 ...
- $ V5  : num  -0.92 -0.967 -0.97 -0.973 -0.967 ...
-- list output truncated
+ $ V5  : num  -0.92 -0.967 -0.97 -0.973 -0.967 ... <br />
+
+(list output truncated) <br />
 
 ## AFTER MERGING TEST DATA AND TRAINING DATA TO HAVE ONE DATA SET FOR SUBJECT/ACTIVITY/FEATURES(RBINDING)
 
@@ -152,7 +155,7 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
 
 ## Data_All data frame after all data sets are merged together:
 
- > str(Data_All)
+* str(Data_All)
 'data.frame':	10299 obs. of  563 variables:
  $ ACTIVITY                            : int  5 5 5 5 5 5 5 5 5 5 ...
  $ SUBJECT                             : int  2 2 2 2 2 2 2 2 2 2 ...
@@ -167,7 +170,7 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
 ## EXTRACTING THE MEASUREMENTS ON THE MEAN AND STD FOR EACH MEASUREMENT 
 ## Data set with with measurements on the mean and standard deviation only
 
-*str(Names_selection)
+* str(Names_selection)
  chr [1:81] "tBodyAcc-mean()-X" "tBodyAcc-mean()-Y" "tBodyAcc-mean()-Z" ...
 
 * str(Data_All_StD_Mean)
@@ -346,59 +349,60 @@ The TIDY.TXT file contains the fields that will be described below:
 *********************************************************************************************************************
 												    CREATING THE CLEAN DATAFILE
 *********************************************************************************************************************
-1. GETTING THE DATA - downloading of data from the source and unzipping it in the project folder (./project). Unzipping of the data into the project subfolder UCI HAR Dataset
+## GETTING THE DATA 
 
-2. READING OF DATA FROM THE PARTICULAR FILES
+Downloading of data from the source and unzipping it in the project folder (./project). Unzipping of the data into the project subfolder UCI HAR Dataset
+
+## READING OF DATA FROM THE PARTICULAR FILES
 
 * Reading of data from the files into the variables <br />
 
-2.1 Read the Activity files <br />
-2.2 Read the Subject files <br />
-2.3 Read Features files <br /> 
+ * Read the Activity files <br />
+ * Read the Subject files <br />
+ * Read Features files <br /> 
 
 ##As mentioned above - Explanation of the connection between the data files and the variables
 
 A. Values of Variable Activity consist of: <br />
-	1. data from “Y_train.txt” <br />
-	2. data from “Y_test.txt” <br />
+	* data from “Y_train.txt” <br />
+	* data from “Y_test.txt” <br />
 
 B. Values of Variable Subject consist of: <br />
-	1. data from “subject_train.txt” <br />
-	2. and subject_test.txt" <br />
+	* data from “subject_train.txt” <br />
+	* and subject_test.txt" <br />
 
 C. Values of Variable Features consist of: <br />
-    1. data from “X_train.txt” <br />
-    2. data from “X_test.txt” <br />
+    * data from “X_train.txt” <br />
+    * data from “X_test.txt” <br />
 
 
 D. Particular levels of Variable Activity come from “activity_labels.txt”
 
 E. Names of Variable Features come from “features.txt”
 
-
-3. CREATING ONE DATA SET BY MERGING THE TRAINING AND THE TEST SETS 
+## CREATING ONE DATA SET BY MERGING THE TRAINING AND THE TEST SETS 
 * merging the data tables by rows
 * naming the variables with Subject and Activity names
 * creating one data set for all data (merging by columns)
 
 
-4. EXTRACTING THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR PARTICULAR MEASUREMENTS
+## EXTRACTING THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR PARTICULAR MEASUREMENTS
 * Subsetting the Name of Features by measurements on the mean and standard deviation and using these selected feature names to subset the data frame.
 
-5. USING DESCRIPTIVE ACTIVITY NAMES TO NAME THE ACTIVITIES IN THE DATA SET 
+## USING DESCRIPTIVE ACTIVITY NAMES TO NAME THE ACTIVITIES IN THE DATA SET 
 * Descriptive activity names are read from “activity_labels.txt”
 * Variable Activity is factorized in the data frame using descriptive activity names
 
-6. APPROPRIATELY LABELS THE DATA SET WITH DESCRIPTIVE VARIABLE NAMES 
+## APPROPRIATELY LABELS THE DATA SET WITH DESCRIPTIVE VARIABLE NAMES 
 
-The following substitutions were applied: 
+The following substitutions were applied: <br />
 
-Gyro -> Gyroskope
-Mag -> Magnitude
-Prefix "t" -> Time
-Acc -> Accelerometer
-BodyBody -> Body
-Prefix "f" -> Frequency
+* Gyro -> Gyroskope 
+* Mag -> Magnitude
+* Prefix "t" -> Time
+* Acc -> Accelerometer
+* BodyBody -> Body
+* Prefix "f" -> Frequency
 
 7. CREATING A SECOND, INDEPENDENT TIDY DATA SET AND OUTPUTING IT INTO TIDYDATA.TXT 
 
