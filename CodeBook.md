@@ -75,16 +75,16 @@ For the purposes of this project, the files in the Inertial Signals folders are 
 ##Explanation of the connection between the data files and the variables
 
 A. Values of Variable Activity consist of: <br />
-	1. data from “Y_train.txt” <br />
-	2. data from “Y_test.txt” <br />
+* data from “Y_train.txt” <br />
+* data from “Y_test.txt” <br />
 
 B. Values of Variable Subject consist of: <br />
-	1. data from “subject_train.txt” <br />
-	2. and subject_test.txt" <br />
+* data from “subject_train.txt” <br />
+* and subject_test.txt" <br />
 
 C. Values of Variable Features consist of: <br />
-    1. data from “X_train.txt” <br />
-    2. data from “X_test.txt” <br />
+* data from “X_train.txt” <br />
+* data from “X_test.txt” <br />
 
 
 D. Particular levels of Variable Activity come from “activity_labels.txt”
@@ -164,9 +164,9 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
  $ tBodyAcc-mean()-Y                   : num  -0.0233 -0.0132 -0.0261 -0.0326 -0.0278 ...
  $ tBodyAcc-mean()-Z                   : num  -0.0147 -0.1191 -0.1182 -0.1175 -0.1295 ...
  $ tBodyAcc-std()-X                    : num  -0.938 -0.975 -0.994 -0.995 -0.994 ...
- $ tBodyAcc-std()-Y                    : num  -0.92 -0.967 -0.97 -0.973 -0.967 ...
+ $ tBodyAcc-std()-Y                    : num  -0.92 -0.967 -0.97 -0.973 -0.967 ... <br />
 
-
+(list output truncated) 
 
 ## EXTRACTING THE MEASUREMENTS ON THE MEAN AND STD FOR EACH MEASUREMENT 
 ## Data set with with measurements on the mean and standard deviation only
@@ -188,12 +188,12 @@ In order to have descriptive variables, "Activity" "Subject" and "Features" will
 
 ## Appropriately labels the data set with descriptive variable names (changes shortenings/prefixes for full descriptive name. The following substitutions were applied: 
 
-1. Gyro -> Gyroskope
-2. Mag -> Magnitude
-3. Prefix "t" -> Time
-4. Acc -> Accelerometer
-5. BodyBody -> Body
-6. Prefix "f" -> Frequency
+* `Gyro -> Gyroskope`
+* `Mag -> Magnitude`
+* `Prefix "t" -> Time`
+* `Acc -> Accelerometer`
+* `BodyBody -> Body`
+* `Prefix "f" -> Frequency`
 
 
 * names(Data_All_StD_Mean)
@@ -291,7 +291,7 @@ The TIDY.TXT file contains the fields that will be described below:
 *********************************************************************************************************************
 ## GETTING THE DATA 
 
-Downloading of data from the source and unzipping it in the project folder (./project). Unzipping of the data into the project subfolder UCI HAR Dataset
+Downloading of data from the source to the project folder (./project). Unzipping of the data into the project subfolder UCI HAR Dataset
 
 ## READING OF DATA FROM THE PARTICULAR FILES
 
@@ -337,12 +337,12 @@ E. Names of Variable Features come from “features.txt”
 
 The following substitutions were applied: <br />
 
-* Gyro -> Gyroskope 
-* Mag -> Magnitude
-* Prefix "t" -> Time
-* Acc -> Accelerometer
-* BodyBody -> Body
-* Prefix "f" -> Frequency
+* `Gyro -> Gyroskope`
+* `Mag -> Magnitude`
+* `Prefix "t" -> Time`
+* `Acc -> Accelerometer`
+* `BodyBody -> Body`
+* `Prefix "f" -> Frequency`
 
 ## CREATING A SECOND, INDEPENDENT TIDY DATA SET AND OUTPUTING IT INTO TIDYDATA.TXT 
 
