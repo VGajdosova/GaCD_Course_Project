@@ -36,12 +36,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
  * Uses descriptive activity names to name the activities in the data set - Levels of Varible Activity come from “activity_labels.txt”, factorizing variable activity
  * Appropriately labels the data set with descriptive variable names (changes shortenings/prefixes for full descriptive name. The following substitutions were applied: <br />
 
-   Gyro -> Gyroskope <br />
-   Mag -> Magnitude <br />
-   Prefix "t" -> Time <br />
-   Acc -> Accelerometer <br />
-   BodyBody -> Body <br />
-   Prefix "f" -> Frequency <br />
+	`Gyro -> Gyroskope`
+	`Mag -> Magnitude`
+	`Prefix "t" -> Time`
+	`Acc -> Accelerometer`
+	`BodyBody -> Body`
+	`Prefix "f" -> Frequency`
 
  * Creates an independent tidy data set with the average of each variable for each activity and each subject.
  * Finally, the script will create a tidy data set containing the means of all the columns (per test subject & per activity). The name of this tidy dataset is called tidydata.txt, and it can also be found in this repository together with the codebook and run_analysis.R code.
@@ -50,9 +50,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 2. THE CODEBOOK (CodeBook.md)
 
-The file provides project information (objectives of the project, information on the data, variables, as well as any transformation and work performed in the process of tidying the data to the final stage.
+The file provides project information (objectives of the project, information on the data, variables, as well as any transformation and work performed in the process of tidying the data to the final stage. <br />
 
-
-3. TIDY DATASET (tidydata.txt)
+3. TIDY DATA SET (tidydata.txt)
 
 Tidy data set containing the means of all the columns per test subject and per activity
